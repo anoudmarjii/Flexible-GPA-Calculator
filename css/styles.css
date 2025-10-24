@@ -1,0 +1,285 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900'); */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800'); */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900');
+
+body{
+    font-family: "Roboto Serif";
+    font-size: 15px;
+}
+
+header{
+    background-color: #5D1725;
+    padding: 28px;
+    width: auto;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    /* font-weight: bold; */
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+p{
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 20px;
+    margin-top: 10px;
+}
+
+#coursesContainer{
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr); */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* centers all boxes *
+    /* align-items: center; */
+    justify-content: center;
+    gap: 70px;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#lastRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 70px;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+.course{
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    justify-content: center;
+    background-color: #5D1725;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 3px;
+    padding-right: 3px;
+    align-items: center;
+    font-size: 13px;
+    border-radius: 20px;
+    border-width: 3.5px;
+    border-style: solid;
+    border-color: black;
+    opacity: 0.95;
+}
+
+h6{
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+r{
+    width: 300px;
+    margin: 5px 0px;
+    text-align: center;
+}
+
+#finalGrade, #creditHours{
+    width: 170px;
+    text-align: center;
+    margin: 3px;
+}
+
+input{
+    width: 50px;
+    background-color: #EED6DB;
+    font-family: "Roboto Serif";
+    border: 2px;
+    border-style: solid;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  align-content: center;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  align-content: center;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 10px;
+  border: 1px solid #888;
+  width: 40%;
+  text-align: center;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button{
+    background-color: #5D1725;
+    font-family: "Roboto Serif";
+    color: white;
+    margin-top: 40px;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight:500;
+    width: 150px;
+    align-self: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;   
+}
+
+button:hover {
+  background-color: #CFABB0;
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: #EED6DB;
+  transform: scale(1);
+}
+
+#footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #5D1725 ;
+    color: white;
+    /* /* position: fixed; */
+    bottom: 0; 
+    width: auto;
+    padding: 8px;
+    }
+
+a, i {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 5px;
+}
+
+#footerRights{
+    font-size: 10px;
+    padding: 10px;
+}
+
+#copyrightSymbol{
+    font-size: 10px;
+    padding: 0px;
+}
+
+
+
+/* mobile devices */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    #coursesContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 45px;
+    }
+
+    #lastRow{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+        margin-top: 25px;
+        /* margin-right: auto;
+        margin-left: auto; */
+        gap: 45px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .course{
+        width: 270px;
+        /* margin-right: 20px;
+        margin-left: 10px; */
+    }
+}
+
+/* iPads and tablets */
+@media screen and (min-width: 481px) and (max-width:890px){
+    main{
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    #coursesContainer{
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 45px;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#lastRow{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content:center;
+        margin-top: 40px;
+        /* margin-right: auto;
+        margin-left: auto; */
+        gap: 45px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    #lastRow .course{
+        width: 275px;
+    }
+}
