@@ -1,21 +1,34 @@
-const boxes = document.querySelectorAll('.course');
-const btn = document.getElementById('addMore');
+const courses = document.querySelectorAll('.course');
+const addMoreBtn = document.getElementById('addMore');
 
-let visibleCount = 3; // how many boxes to show initially
-showBoxes(visibleCount);
+let visibleCount = 3; // number of visible courses on mobile
 
-btn.addEventListener('click', () => {
-  visibleCount += 1; // show one more per click
-  showBoxes(visibleCount);
-});
-
-function showBoxes(count) {
-  boxes.forEach((box, index) => {
-    box.style.display = index < count ? 'flex' : 'none';
+function showCourses(count) {
+  courses.forEach((course, index) => {
+    course.style.display = index < count ? 'flex' : 'none';
   });
 
-  // hide button when all boxes are visible
-  if (count >= boxes.length) {
-    btn.style.display = 'none';
+  if (count >= courses.length) {
+    addMoreBtn.style.display = 'none';
   }
 }
+
+// mobile behavior only
+function handleResize() {
+  if (window.innerWidth <= 480) {
+    showCourses(visibleCount);
+    addMoreBtn.style.display = visibleCount >= courses.length ? 'none' : 'block';
+  } else {
+    // show all on tablet and desktop
+    courses.forEach(course => (course.style.display = 'flex'));
+    addMoreBtn.style.display = 'none';
+  }
+}
+
+addMoreBtn.addEventListener('click', () => {
+  visibleCount += 1;
+  showCourses(visibleCount);
+});
+
+window.addEventListener('resize', handleResize);
+handleResize(); // run when page loads
