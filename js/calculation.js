@@ -2,7 +2,7 @@
 const modal = document.getElementById("myModal");
 const resultText = document.getElementById("result");
 const closeModal = document.getElementsByClassName("close")[0];
-const btn = document.querySelector("button"); // Your Calculate button
+const btn = document.querySelector("#calculate"); // Your Calculate button
 
 // GPA calculation function
 function calculateGPA() {
