@@ -216,6 +216,10 @@ a, i {
     padding: 0px;
 }
 
+#addMore{
+    display: none;
+}
+
 
 
 /* mobile devices */
@@ -244,6 +248,11 @@ a, i {
         width: 270px;
         /* margin-right: 20px;
         margin-left: 10px; */
+    }
+
+    #addMore{
+        display: block;
+        margin-top: 10px;
     }
 }
 
