@@ -187,6 +187,14 @@ button:active {
   transform: scale(1);
 }
 
+button:focus,
+button:active {
+  background-color: #5D1725; /* reset to normal */
+  transform: scale(1);
+  outline: none;
+}
+
+
 #footer{
     display: flex;
     flex-direction: column;
