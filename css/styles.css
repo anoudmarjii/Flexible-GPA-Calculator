@@ -112,6 +112,7 @@ input{
 /* The Modal (background) */
 .modal {
   display: none;
+  position: fixed;
   z-index: 1;
   left: 0;
   top: 0;
@@ -292,3 +293,4 @@ a, i {
     }
 
 }
+
